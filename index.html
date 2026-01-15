@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- ===================== HEAD START ===================== -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- Tailwind CSS -->
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+  <!-- ===================== HEAD END ===================== -->
+
+  <body class="bg-black font-[Poppins]">
+    <!-- ===================== MAIN WRAPPER START ===================== -->
+    <div class="flex flex-col gap-2 m-2">
+      <!-- ===================== HEADER START ===================== -->
+      <header
+        class="w-full py-2 rounded-lg bg-black flex items-center justify-between"
+      >
+        <!-- Left -->
+        <div class="flex items-center gap-2 flex-1">
+          <img src="assets/logo2.png" alt="Spotify" class="w-9 mx-2" />
+
+          <div class="hidden sm:flex bg-[#1f1f1f] p-2 rounded-full">
+            <i class="fa-solid fa-house text-white text-xl"></i>
+          </div>
+
+          <div
+            class="bg-[#1f1f1f] px-3 py-2 rounded-full flex items-center gap-2 w-full max-w-xs"
+          >
+            <i class="fa-solid fa-magnifying-glass text-white"></i>
+            <input
+              type="search"
+              placeholder="What do you want to play?"
+              class="bg-transparent text-white outline-none w-full text-sm"
+            />
+          </div>
+        </div>
+
+        <!-- Right -->
+        <div class="hidden md:flex items-center gap-4 text-white">
+          <button class="text-gray-400 hover:text-white font-semibold">
+            Premium
+          </button>
+          <button class="text-gray-400 hover:text-white font-semibold">
+            Support
+          </button>
+          <button class="text-gray-400 hover:text-white font-semibold">
+            Download
+          </button>
+
+          <div class="w-px h-5 bg-white"></div>
+
+          <button class="text-gray-400 hover:text-white font-semibold">
+            <i class="fa-regular fa-circle-down mr-1"></i> Install App
+          </button>
+
+          <button class="text-gray-400 hover:text-white font-semibold">
+            Sign up
+          </button>
+
+          <button
+            class="bg-white text-black px-6 py-2 rounded-full font-bold hover:bg-gray-200"
+          >
+            Log in
+          </button>
+        </div>
+      </header>
+      <!-- ===================== HEADER END ===================== -->
+
+      <!-- ===================== LAYOUT START ===================== -->
+      <div class="flex gap-2">
+        <!-- ===================== SIDEBAR START ===================== -->
+        <aside
+          class="hidden lg:flex flex-col w-[26%] bg-[#121212] rounded-lg text-white h-[78vh]"
+        >
+          <!-- Library Header -->
+          <div class="flex justify-between items-center px-6 py-6">
+            <p class="font-bold">Your Library</p>
+            <button class="bg-[#1f1f1f] p-2 rounded-full">
+              <i class="fa-solid fa-plus"></i> Create
+            </button>
+          </div>
+
+          <!-- Scroll -->
+          <div class="px-4 overflow-y-auto flex-1 space-y-4">
+            <div class="bg-[#1f1f1f] p-4 rounded-lg">
+              <h1 class="font-bold">Create your first playlist</h1>
+              <p class="text-sm text-gray-300">It's easy, we'll help you</p>
+              <button
+                class="mt-2 bg-white text-black px-4 py-1 rounded-full font-semibold"
+              >
+                Create playlist
+              </button>
+            </div>
+
+            <div class="bg-[#1f1f1f] p-4 rounded-lg">
+              <h1 class="font-bold">Let's find some podcasts</h1>
+              <p class="text-sm text-gray-300">We'll keep you updated</p>
+              <button
+                class="mt-2 bg-white text-black px-4 py-1 rounded-full font-semibold"
+              >
+                Browse podcasts
+              </button>
+            </div>
+          </div>
+        </aside>
+        <!-- ===================== SIDEBAR END ===================== -->
+        <!-- ===================== MAIN CONTENT START ===================== -->
+        <main
+          class="flex-1 h-[78vh] bg-gradient-to-b from-[#202020] to-[#1f1f1f] rounded-lg overflow-y-auto px-4 sm:px-6 pt-6"
+        >
+          <!-- ===================== TRENDING SONGS START ===================== -->
+          <section class="mb-10">
+            <div class="flex justify-between items-center mb-4">
+              <h2 class="text-2xl font-bold text-white">Trending Songs</h2>
+              <span
+                class="text-gray-400 hover:text-white cursor-pointer font-semibold"
+              >
+                Show all
+              </span>
+            </div>
+
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+            >
+              <!-- Card 1 -->
+              <div class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer">
+                <img src="assets/card-image1.jpeg" class="rounded-lg mb-2" />
+                <h3 class="text-white text-sm font-semibold">
+                  Ghar Kab Aaoge (From "BORDER2")
+                </h3>
+                <p class="text-gray-400 text-xs">
+                  Anu Malik, Mithoon, Sonu Nigam, Arijit Singh
+                </p>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer">
+                <img src="assets/card-img2.jpeg" class="rounded-lg mb-2" />
+                <h3 class="text-white text-sm font-semibold">No Guilty</h3>
+                <p class="text-gray-400 text-xs">Dhanda Nayoliwala</p>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer">
+                <img src="assets/card-img3.jpeg" class="rounded-lg mb-2" />
+                <h3 class="text-white text-sm font-semibold">
+                  Ishq Da Chehra (From "BORDER2")
+                </h3>
+                <p class="text-gray-400 text-xs">
+                  Diljit Dosanjh, Sachet Tandon, Parampara
+                </p>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer">
+                <img src="assets/card-img4.jpeg" class="rounded-lg mb-2" />
+                <h3 class="text-white text-sm font-semibold">
+                  Sahana Sahana (From "The Rajasaab")
+                </h3>
+                <p class="text-gray-400 text-xs">
+                  Thaman S, Vishal Mishra, Shruti Ranjani
+                </p>
+              </div>
+
+              <!-- Card 5 -->
+              <div class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer">
+                <img src="assets/card-img5.jpeg" class="rounded-lg mb-2" />
+                <h3 class="text-white text-sm font-semibold">
+                  Shree Hanuman Chalisa
+                </h3>
+                <p class="text-gray-400 text-xs">Hariharan</p>
+              </div>
+
+              <!-- Card 6 -->
+              <div class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer">
+                <img src="assets/card-img6.jpeg" class="rounded-lg mb-2" />
+                <h3 class="text-white text-sm font-semibold">Khat</h3>
+                <p class="text-gray-400 text-xs">Navjot Ahuja</p>
+              </div>
+            </div>
+          </section>
+          <!-- ===================== TRENDING SONGS END ===================== -->
+
+          <!-- ===================== POPULAR ARTISTS START ===================== -->
+          <section class="mb-10">
+            <div class="flex justify-between items-center mb-4">
+              <h2 class="text-2xl font-bold text-white">Popular Artists</h2>
+              <span
+                class="text-gray-400 hover:text-white cursor-pointer font-semibold"
+              >
+                Show all
+              </span>
+            </div>
+
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+            >
+              <!-- Artist 1 -->
+              <div
+                class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer text-center"
+              >
+                <img src="assets/artist-img1.jpeg" class="rounded-full mb-2" />
+                <h3 class="text-white font-semibold text-sm">Pritam</h3>
+                <p class="text-gray-400 text-xs">Artist</p>
+              </div>
+
+              <!-- Artist 2 -->
+              <div
+                class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer text-center"
+              >
+                <img src="assets/artist-img2.jpeg" class="rounded-full mb-2" />
+                <h3 class="text-white font-semibold text-sm">A.R. Rahman</h3>
+                <p class="text-gray-400 text-xs">Artist</p>
+              </div>
+
+              <!-- Artist 3 -->
+              <div
+                class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer text-center"
+              >
+                <img src="assets/artist-img3.png" class="rounded-full mb-2" />
+                <h3 class="text-white font-semibold text-sm">Sachin - Jigar</h3>
+                <p class="text-gray-400 text-xs">Artist</p>
+              </div>
+
+              <!-- Artist 4 -->
+              <div
+                class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer text-center"
+              >
+                <img src="assets/artist-img1.jpeg" class="rounded-full mb-2" />
+                <h3 class="text-white font-semibold text-sm">Pritam</h3>
+                <p class="text-gray-400 text-xs">Artist</p>
+              </div>
+
+              <!-- Artist 5 -->
+              <div
+                class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer text-center"
+              >
+                <img src="assets/artist-img2.jpeg" class="rounded-full mb-2" />
+                <h3 class="text-white font-semibold text-sm">A.R. Rahman</h3>
+                <p class="text-gray-400 text-xs">Artist</p>
+              </div>
+
+              <!-- Artist 6 -->
+              <div
+                class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer text-center"
+              >
+                <img src="assets/artist-img3.png" class="rounded-full mb-2" />
+                <h3 class="text-white font-semibold text-sm">Sachin - Jigar</h3>
+                <p class="text-gray-400 text-xs">Artist</p>
+              </div>
+            </div>
+          </section>
+          <!-- ===================== POPULAR ARTISTS END ===================== -->
+          <!-- ===================== POPULAR RADIO START ===================== -->
+          <section class="mb-10">
+            <div class="flex justify-between items-center mb-4">
+              <h2 class="text-2xl font-bold text-white">Popular Radio</h2>
+              <span
+                class="text-gray-400 hover:text-white cursor-pointer font-semibold"
+              >
+                Show all
+              </span>
+            </div>
+
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+            >
+              <!-- Radio Card 1 -->
+              <div class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer">
+                <img src="assets/radio-img1.jpeg" class="rounded-lg mb-2" />
+                <p class="text-gray-400 text-xs">
+                  With Sachin-Jigar, Shaarib Toshi, Pritam and more
+                </p>
+              </div>
+
+              <!-- Radio Card 2 -->
+              <div class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer">
+                <img src="assets/radio-img2.jpeg" class="rounded-lg mb-2" />
+                <p class="text-gray-400 text-xs">
+                  With Pritam, Vishal-Shekhar and more
+                </p>
+              </div>
+
+              <!-- Radio Card 3 -->
+              <div class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer">
+                <img src="assets/radio-img3.jpeg" class="rounded-lg mb-2" />
+                <p class="text-gray-400 text-xs">
+                  With Arijit Singh, Shankar-Ehsaan-Loy and more
+                </p>
+              </div>
+
+              <!-- Radio Card 4 -->
+              <div class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer">
+                <img src="assets/radio-img1.jpeg" class="rounded-lg mb-2" />
+                <p class="text-gray-400 text-xs">
+                  With Sachin-Jigar, Shaarib Toshi, Pritam and more
+                </p>
+              </div>
+
+              <!-- Radio Card 5 -->
+              <div class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer">
+                <img src="assets/radio-img2.jpeg" class="rounded-lg mb-2" />
+                <p class="text-gray-400 text-xs">
+                  With Pritam, Vishal-Shekhar and more
+                </p>
+              </div>
+
+              <!-- Radio Card 6 -->
+              <div class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer">
+                <img src="assets/radio-img3.jpeg" class="rounded-lg mb-2" />
+                <p class="text-gray-400 text-xs">
+                  With Arijit Singh, Shankar-Ehsaan-Loy and more
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- ===================== POPULAR RADIO END ===================== -->
+
+          <!-- ===================== FEATURED CHARTS START ===================== -->
+          <section class="mb-16">
+            <div class="flex justify-between items-center mb-4">
+              <h2 class="text-2xl font-bold text-white">Featured Charts</h2>
+              <span
+                class="text-gray-400 hover:text-white cursor-pointer font-semibold"
+              >
+                Show all
+              </span>
+            </div>
+
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+            >
+              <!-- Chart 1 -->
+              <div class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer">
+                <img src="assets/f-img1.jpg" class="rounded-lg mb-2" />
+                <p class="text-gray-400 text-xs">
+                  Your weekly update of the most played tracks
+                </p>
+              </div>
+
+              <!-- Chart 2 -->
+              <div class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer">
+                <img src="assets/f-img2.jpg" class="rounded-lg mb-2" />
+                <p class="text-gray-400 text-xs">
+                  Your weekly update of the most played tracks
+                </p>
+              </div>
+
+              <!-- Chart 3 -->
+              <div class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer">
+                <img src="assets/f-img3.jpg" class="rounded-lg mb-2" />
+                <p class="text-gray-400 text-xs">
+                  Daily updates of the most played tracks
+                </p>
+              </div>
+
+              <!-- Chart 4 -->
+              <div class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer">
+                <img src="assets/f-img4.jpg" class="rounded-lg mb-2" />
+                <p class="text-gray-400 text-xs">
+                  Daily updates of the most played tracks
+                </p>
+              </div>
+
+              <!-- Chart 5 -->
+              <div class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer">
+                <img src="assets/f-img1.jpg" class="rounded-lg mb-2" />
+                <p class="text-gray-400 text-xs">
+                  Your weekly update of the most played tracks
+                </p>
+              </div>
+
+              <!-- Chart 6 -->
+              <div class="p-3 rounded-lg hover:bg-[#2e2d2da6] cursor-pointer">
+                <img src="assets/f-img2.jpg" class="rounded-lg mb-2" />
+                <p class="text-gray-400 text-xs">
+                  Your weekly update of the most played tracks
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- ===================== FEATURED CHARTS END ===================== -->
+
+          <!-- ===================== FOOTER START ===================== -->
+          <footer class="border-t border-gray-600 pt-8 mb-24">
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-sm text-gray-400"
+            >
+              <div>
+                <h3 class="text-white font-semibold mb-2">Company</h3>
+                <p class="hover:underline cursor-pointer">About</p>
+                <p class="hover:underline cursor-pointer">Jobs</p>
+                <p class="hover:underline cursor-pointer">For the Record</p>
+              </div>
+
+              <div>
+                <h3 class="text-white font-semibold mb-2">Communities</h3>
+                <p class="hover:underline cursor-pointer">For Artists</p>
+                <p class="hover:underline cursor-pointer">Developers</p>
+                <p class="hover:underline cursor-pointer">Advertising</p>
+                <p class="hover:underline cursor-pointer">Investors</p>
+              </div>
+
+              <div>
+                <h3 class="text-white font-semibold mb-2">Useful Links</h3>
+                <p class="hover:underline cursor-pointer">Support</p>
+                <p class="hover:underline cursor-pointer">Free Mobile App</p>
+                <p class="hover:underline cursor-pointer">Popular by Country</p>
+                <p class="hover:underline cursor-pointer">Import your Music</p>
+              </div>
+
+              <div>
+                <h3 class="text-white font-semibold mb-2">Spotify Plans</h3>
+                <p class="hover:underline cursor-pointer">Premium Lite</p>
+                <p class="hover:underline cursor-pointer">Premium Standard</p>
+                <p class="hover:underline cursor-pointer">Premium Student</p>
+                <p class="hover:underline cursor-pointer">Spotify Free</p>
+              </div>
+
+              <div class="flex gap-4">
+                <i
+                  class="fa-brands fa-instagram text-white text-xl cursor-pointer"
+                ></i>
+                <i
+                  class="fa-brands fa-twitter text-white text-xl cursor-pointer"
+                ></i>
+                <i
+                  class="fa-brands fa-facebook text-white text-xl cursor-pointer"
+                ></i>
+              </div>
+            </div>
+
+            <p class="text-gray-400 text-xs mt-10">
+              <span class="font-bold text-white">Shashikat Pandey</span> © 2026
+              Spotify AB
+            </p>
+          </footer>
+          <!-- ===================== FOOTER END ===================== -->
+        </main>
+        <!-- ===================== MAIN CONTENT END ===================== -->
+      </div>
+      <!-- ===================== LAYOUT END ===================== -->
+
+      <!-- ===================== BOTTOM BANNER START ===================== -->
+      <div
+        class="mt-2 p-4 rounded-lg bg-gradient-to-r from-[#ae2896] via-[#7f61c5] to-[#509af4] flex flex-col sm:flex-row justify-between items-center gap-4"
+      >
+        <div class="text-white text-center sm:text-left">
+          <h3 class="font-semibold">Preview of Spotify</h3>
+          <p class="text-sm">
+            Sign up to get unlimited songs and podcasts with occasional ads.
+          </p>
+        </div>
+
+        <button
+          class="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200"
+        >
+          Sign up for free
+        </button>
+      </div>
+      <!-- ===================== BOTTOM BANNER END ===================== -->
+    </div>
+    <!-- ===================== MAIN WRAPPER END ===================== -->
+  </body>
+</html>
