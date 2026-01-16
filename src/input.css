@@ -5,6 +5,9 @@
 body {
   overflow: hidden;
 }
+button {
+  cursor: pointer;
+}
 /* Custom scrollbar */
 *::-webkit-scrollbar {
   width: 6px;
