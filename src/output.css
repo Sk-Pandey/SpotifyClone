@@ -500,6 +500,10 @@
 body {
   overflow: hidden;
 }
+button {
+  cursor: pointer;
+  scale: 1.1;
+}
 *::-webkit-scrollbar {
   width: 6px;
 }
